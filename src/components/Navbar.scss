@@ -1,0 +1,23 @@
+.navbar {
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+    .navbar-dashboard {
+        color: black;
+    }
+
+    .navbar-wallet {
+        color: black;
+    }
+}

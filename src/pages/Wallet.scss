@@ -1,0 +1,230 @@
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.wallet {
+    min-height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: transitionIn .75s;
+    z-index: 1;
+    background-color: var(--background);
+
+    .add-coin {
+        margin: 1rem;
+        width: 80vw;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 3px solid var(--secondary);
+        border-radius: 1rem;
+
+        .add-coin-select {
+            height: 100%;
+            width: 40%;
+            border-top-left-radius: 1rem;
+            border-end-start-radius: 1rem;
+        }
+
+        .add-coin-amount {
+            height: 100%;
+            width: 40%;
+            padding-left: .5rem;
+        }
+
+        .add-coin-button {
+            height: 100%;
+            width: 30%;
+            border-end-end-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+    }
+
+    .wallet-container {
+        margin-top: 1rem;
+        width: 80vw;
+        min-height: 0;
+
+        .wallet-container-top {
+            display: flex;
+            height: 1.5rem;
+            font-weight: bold;
+            background-color: white;
+            border-bottom: 3px solid var(--secondary);
+
+            .wallet-top-left {
+                width: 2.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: .8rem;
+            }
+
+            .wallet-top-middle {
+                width: 50%;
+                border-left: 3px solid var(--secondary);
+                border-right: 3px solid var(--secondary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: .8rem;
+            }
+
+            .wallet-top-right {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-right: .2rem;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .modal-container {
+        .modal {
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(.1rem);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+    
+        .modal-open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .edit-modal {
+            width: 70vw;
+            height: 20vh;
+            background-color: var(--primary);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            z-index: 11;
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .edit-container {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                font-weight: bold;
+
+                input {
+                    width: 50%;
+                }
+            }
+
+            .button-containers {
+                margin-top: 2rem;
+                display: flex;
+                gap: 2rem;
+
+                button {
+                    width: 5rem;
+                    height: 3rem;
+                    border-radius: .5rem;
+                    font-size: 1rem;
+                }
+
+                .edit {
+                    background-color: wheat;
+                }
+            }
+        }
+
+        .edit-modal-open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .delete-modal {
+            width: 70vw;
+            height: 15vh;
+            background-color: var(--primary);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            z-index: 11;
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .delete-modal-title {
+                font-weight: bold;
+            }
+
+            .button-containers {
+                margin-top: .5rem;
+                display: flex;
+                gap: .5rem;
+
+                button {
+                    width: 5rem;
+                    height: 2rem;
+                    border-radius: .5rem;
+                }
+
+                .delete {
+                    background-color: red;
+                }
+            }
+        }
+
+        .delete-modal-open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .add-coin {
+            width: 40vw;
+        }
+
+        .wallet-container {
+            width: 40vw;
+        }
+
+        .modal-container {
+            .edit-modal {
+                width: 20vw;
+            }
+
+            .delete-modal {
+                width: 15svw;
+            }
+        }
+    }
+}

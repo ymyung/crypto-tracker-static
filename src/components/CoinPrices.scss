@@ -1,0 +1,40 @@
+.coin-prices-container {
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+
+    .coin-container {
+        border: 3px solid var(--secondary);
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .coin-left-container {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            align-items: center;
+
+            .coin-image {
+                height: 100%;
+            }
+
+            .coin-name {
+                margin-left: 1rem;
+            }
+        }
+
+        .coin-right-container {
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 1rem;
+
+            .coin-price {
+            }
+        }
+    }
+}
